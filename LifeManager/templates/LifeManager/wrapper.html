@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Пример веб-страницы</title>
+  {% load static %}  
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}" type="text/css">
+ </head>
+ <body>
+    <div class="jumbotron">
+    <div class="container">
+	<h1>{% include "LifeManager/includes/1.html" %}</h1>
+      <p>
+	  {% block content %}
+	  {% endblock %}</p>
+
+    {% block huy %}
+    {% endblock %}</p>
+
+
+      <p>
+        <a href="/" class="btn btn-success btn-lg">Главная страница</a>
+        <a href="/news" class="btn btn-primary btn-lg">Новости</a>
+		<a href="/contact" class="btn btn-info btn-lg">Контакты</a>
+      </p>
+    </div>
+  </div>
+  <div class="container">
+    <img src="{% static 'LifeManager/image/1.jpg' %}" class="img-thumbnail">
+    <hr>
+    &copy; Все права защищены 2018
+  </div>
+  
+ </body>
+</html>
